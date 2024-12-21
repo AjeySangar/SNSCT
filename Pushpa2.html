@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pushpa 2 - Showtimes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .header {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 5px;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .header p {
+            margin: 0;
+            font-size: 16px;
+            color: #6c757d;
+        }
+
+        .date-picker {
+            display: flex;
+            justify-content: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .date-picker button {
+            border: 1px solid #ddd;
+            background: #fff;
+            color: #000;
+            padding: 10px 15px;
+            margin-right: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .date-picker button.active {
+            background: #f44336;
+            color: #fff;
+        }
+
+        .cinema {
+            margin-bottom: 20px;
+        }
+
+        .cinema h3 {
+            font-size: 18px;
+            margin: 0 0 10px 0;
+        }
+
+        .showtimes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .showtimes button {
+            border: 1px solid #ddd;
+            background: #fff;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .showtimes button.available {
+            background: #28a745;
+            color: #fff;
+        }
+
+        .showtimes button.non-cancellable {
+            background: #ffc107;
+            color: #fff;
+        }
+
+        .info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 10px;
+            font-size: 14px;
+            color: #6c757d;
+        }
+
+        .info span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .info img {
+            width: 20px;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Pushpa 2</h1>
+            <p>Action | Crime | Drama</p>
+        </div>
+
+        <div class="date-picker">
+            <button class="active">Sat 21 Dec</button>
+            <button>Sun 22 Dec</button>
+            <button>Mon 23 Dec</button>
+            <button>Tue 24 Dec</button>
+            <button>Wed 25 Dec</button>
+        </div>
+
+        <div class="cinema">
+            <h3>AGS Cinemas OMR: Navlur</h3>
+            <div class="showtimes">
+                <button class="available">03:05 PM</button>
+                <button class="available">03:40 PM</button>
+                <button class="available">03:55 PM</button>
+                <button class="available">07:20 PM</button>
+                <button class="available">10:00 PM</button>
+                <button class="non-cancellable">10:30 PM</button>
+            </div>
+        </div>
+
+        <div class="cinema">
+            <h3>AGS Cinemas: Maduravoyal</h3>
+            <div class="showtimes">
+                <button class="available">03:45 PM</button>
+                <button class="available">04:00 PM</button>
+                <button class="available">07:45 PM</button>
+                <button class="non-cancellable">10:50 PM</button>
+            </div>
+        </div>
+
+        <div class="cinema">
+            <h3>AGS Cinemas: T. Nagar</h3>
+            <div class="showtimes">
+                <button class="available">03:40 PM</button>
+                <button class="available">07:00 PM</button>
+                <button class="non-cancellable">10:20 PM</button>
+            </div>
+        </div>
+
+        <div class="cinema">
+            <h3>AGS Cinemas: Villivakkam</h3>
+            <div class="showtimes">
+                <button class="available">03:50 PM</button>
+                <button class="available">07:25 PM</button>
+                <button class="non-cancellable">10:40 PM</button>
+            </div>
+        </div>
+    </div>
+    <script src="path/to/project_scripts.js"></script>
+
+</body>
+</html>

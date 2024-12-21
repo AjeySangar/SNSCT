@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venue Selection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: #343a40;
+        }
+
+        .header p {
+            margin: 5px 0;
+            font-size: 14px;
+            color: #6c757d;
+        }
+
+        .venue {
+            margin-bottom: 15px;
+        }
+
+        .venue button {
+            width: 100%;
+            text-align: left;
+            background: #f8f9fa;
+            border: 1px solid #ddd;
+            padding: 10px 15px;
+            font-size: 16px;
+            color: #495057;
+            border-radius: 4px;
+            cursor: pointer;
+            outline: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .venue button.active {
+            background: #fff;
+            border-color: #007bff;
+        }
+
+        .venue-details {
+            display: none;
+            background: #f1f1f1;
+            border: 1px solid #ddd;
+            border-top: none;
+            padding: 10px;
+            font-size: 14px;
+            color: #495057;
+        }
+
+        .venue-details p {
+            margin: 5px 0;
+        }
+
+        .venue-details a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .venue-details a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <script>
+        function toggleDetails(button) {
+            const details = button.nextElementSibling;
+            const isActive = button.classList.contains('active');
+
+            document.querySelectorAll('.venue button').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.venue-details').forEach(detail => detail.style.display = 'none');
+
+            if (!isActive) {
+                button.classList.add('active');
+                details.style.display = 'block';
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Hamare Zamane Mein by Amit Tandon - India Tour</h1>
+            <p>Step 1: Venue</p>
+        </div>
+
+        <div class="venue">
+            <button onclick="toggleDetails(this)">Chennai <span>&#9660;</span></button>
+            <div class="venue-details">
+                <p>Sir Mutha Venkatasubba Rao Concert Hall: Chennai</p>
+                <p>Date: 26 Jan 2025</p>
+                <a href="#">Know more</a>
+            </div>
+        </div>
+
+        <div class="venue">
+            <button onclick="toggleDetails(this)">Pune <span>&#9660;</span></button>
+            <div class="venue-details">
+                <p>Venue details for Pune will appear here.</p>
+            </div>
+        </div>
+
+        <div class="venue">
+            <button onclick="toggleDetails(this)">Mumbai <span>&#9660;</span></button>
+            <div class="venue-details">
+                <p>Venue details for Mumbai will appear here.</p>
+            </div>
+        </div>
+
+        <div class="venue">
+            <button onclick="toggleDetails(this)">Indore <span>&#9660;</span></button>
+            <div class="venue-details">
+                <p>Venue details for Indore will appear here.</p>
+            </div>
+        </div>
+
+        <div class="venue">
+            <button onclick="toggleDetails(this)">Jaipur <span>&#9660;</span></button>
+            <div class="venue-details">
+                <p>Venue details for Jaipur will appear here.</p>
+            </div>
+        </div>
+
+        <div class="venue">
+            <button onclick="toggleDetails(this)">Delhi-NCR <span>&#9660;</span></button>
+            <div class="venue-details">
+                <p>Venue details for Delhi-NCR will appear here.</p>
+            </div>
+        </div>
+    </div>
+    <script src="path/to/project_scripts.js"></script>
+
+</body>
+</html>
